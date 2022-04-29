@@ -1,8 +1,13 @@
 import type {App} from 'vue';
 import RelayRunner from './core/relayRunner';
 import './core/style/index.css';
-RelayRunner.install = (app: App) => {
+const install = (app: App) => {
   app.component(RelayRunner.name, RelayRunner);
 }
 
-export default RelayRunner;
+export {
+  RelayRunner,
+  install
+}
+
+export default {install}

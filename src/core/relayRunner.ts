@@ -2,7 +2,8 @@ import { defineComponent, h, StyleValue, Teleport, watchEffect, ref, computed, n
 import { useElementBounding } from './hooks/useElementBounding';
 import { useResizeObserver } from './hooks/useResizeObserver';
 import { contextMap, styleMap } from './state';
-const relays = defineComponent({
+const relayRunner = defineComponent({
+  name: 'vue-relay-runner',
   inheritAttrs: true,
   props: {
     id: {
@@ -100,4 +101,4 @@ const relays = defineComponent({
     };
   }
 });
-export default relays;
+export default relayRunner;

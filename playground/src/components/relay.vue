@@ -11,7 +11,7 @@
           class="wrap-item__image"
           :class="isFit ? 'wrap-item__image__fit' : ''"
         >
-          <relay-runner
+          <vue-relay-runner
             :id="idx"
             duration="800"
             :style-attr="{
@@ -19,7 +19,7 @@
             }"
           >
             <the-image :src="user.src" />
-          </relay-runner>
+          </vue-relay-runner>
         </div>
         <div class="wrap-item__name">
           <p>{{ user.name }}</p>
@@ -29,7 +29,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import RelayRunner from 'vue-relay';
+// import RelayRunner from 'vue-relay';
 import { userList } from '../composable/data';
 import TheImage from './theImage.vue';
 const isFit = ref(false);
