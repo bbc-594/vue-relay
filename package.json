@@ -1,0 +1,42 @@
+{
+  "name": "vue-relay",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "keywords": [
+    "vue3",
+    "animation",
+    "across router"
+  ],
+  "dependencies": {
+    "vue": "^3.2.33"
+  },
+  "description": "a vue3 component across router with animations",
+  "devDependencies": {},
+  "scripts": {
+    "build": "pkgroll",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bbc-594/vue-relay.git"
+  },
+  "author": "Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbc-594/vue-relay/issues"
+  },
+  "homepage": "https://github.com/bbc-594/vue-relay#readme"
+}
