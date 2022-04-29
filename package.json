@@ -1,5 +1,5 @@
 {
-  "name": "vue-relay",
+  "name": "vue-relay-runner",
   "version": "0.0.1",
   "keywords": [
     "vue3",
@@ -16,8 +16,8 @@
     "rollup-plugin-vue": "^6.0.0",
     "vue": "^3.2.33"
   },
-  "main": "dist/vue-relay.umd.js",
-  "module": "dist/vue-relay.esm.js",
+  "main": "dist/vue-relay-runner.umd.js",
+  "module": "dist/vue-relay-runner.esm.js",
   "description": "a vue3 component across router with animations",
   "devDependencies": {
     "typescript": "^4.5.4",
