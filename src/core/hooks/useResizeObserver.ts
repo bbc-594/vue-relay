@@ -18,7 +18,6 @@ export function useResizeObserver(
     disConnect();
     if (el) {
       observer = new ResizeObserver(([entry]) => {
-        console.info('resize');
         callback(entry.contentRect);
       });
       el && observer.observe(el);

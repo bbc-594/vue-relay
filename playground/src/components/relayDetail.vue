@@ -17,7 +17,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import RelayRunner from '../../../src/index';
+import RelayRunner from 'vue-relay';
 import { userList } from '../composable/data';
 import TheImage from './theImage.vue';
 import { useRoute } from 'vue-router';

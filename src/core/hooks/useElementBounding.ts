@@ -18,7 +18,6 @@ export function useElementBounding(target: MaybeElementRef, options: UseElementB
   const x = ref(defaultRect?.x ?? 0);
   const y = ref(defaultRect?.y ?? 0);
   function update() {
-    console.info('update');
     if (!target.value) {
       if (reset) {
         height.value = 0;

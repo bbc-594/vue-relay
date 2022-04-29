@@ -16,5 +16,8 @@
     "dist",
     "playground",
     "cypress"
+  ],
+  "include": [
+    "src"
   ]
 }

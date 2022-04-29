@@ -1,32 +1,34 @@
 {
   "name": "vue-relay",
   "version": "0.0.1",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "type": "module",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "keywords": [
     "vue3",
     "animation",
     "across router"
   ],
   "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "rollup": "^2.70.2",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "rollup-plugin-vue": "^6.0.0",
     "vue": "^3.2.33"
   },
+  "main": "dist/vue-relay.umd.js",
+  "module": "dist/vue-relay.esm.js",
   "description": "a vue3 component across router with animations",
-  "devDependencies": {},
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@types/rollup-plugin-css-only": "^3.1.0"
+  },
   "scripts": {
-    "build": "pkgroll",
+    "build": "rollup -c",
+    "build:esm": "rollup --config ./build/rollup.esm.config.js",
+    "build:umd": "rollup --config ./build/rollup.umd.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

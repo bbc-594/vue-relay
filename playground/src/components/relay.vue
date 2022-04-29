@@ -29,7 +29,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import RelayRunner from '../../../src/index';
+import RelayRunner from 'vue-relay';
 import { userList } from '../composable/data';
 import TheImage from './theImage.vue';
 const isFit = ref(false);
@@ -37,7 +37,6 @@ if (window.sessionStorage.getItem('isFit')) {
   isFit.value = JSON.parse(window.sessionStorage.getItem('isFit') ?? 'false');
 }
 watch(() => isFit.value, () => {
-  console.info(isFit.value);
   window.sessionStorage.setItem('isFit', JSON.stringify(isFit.value));
 }, {
   immediate: true
