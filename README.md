@@ -62,7 +62,7 @@ Type: `Object`<br>
 Required: `false`<br>
 you can set some Style for the component
 ```html
-<vue-relay-runner :styleValue={
+<vue-relay-runner :styleAttr={
   borderRadius: 50%
 }/>
 ```
