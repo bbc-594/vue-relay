@@ -29,7 +29,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-// import RelayRunner from 'vue-relay';
 import { userList } from '../composable/data';
 import TheImage from './theImage.vue';
 const isFit = ref(false);

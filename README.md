@@ -57,7 +57,7 @@ a unique id for component to get their context<br>
 ```html
 <vue-relay-runner id="1" />
 ```
-#### styleValue
+#### styleAttr
 Type: `Object`<br>
 Required: `false`<br>
 you can set some Style for the component
