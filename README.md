@@ -3,7 +3,7 @@
 > A vue3 component across router with animations
 ## Install and basic usage
 ```bash
-$ npm i -s vue-relay
+$ npm i -s vue-relay-runner
 ```
 > only works for Vue 3
 
@@ -11,7 +11,8 @@ global registration:
 
 ```js
 import { createApp } from 'vue';
-import VueRelayRunner from 'vue-relay';
+import VueRelayRunner from 'vue-relay-runner';
+import 'vue-relay-runner/dist/relay.css';
 
 const app = createApp(App);
 app.use(VueRelayRunner);
@@ -39,7 +40,8 @@ Use the component:
 </template>
 
 <script>
-  import VueRelayRunner from 'vue-relay';
+  import VueRelayRunner from 'vue-relay-runner';
+  import 'vue-relay-runner/dist/relay.css';
   export default {
       name: 'app',
       components: {
@@ -65,6 +67,13 @@ you can set some Style for the component
 <vue-relay-runner :styleAttr={
   borderRadius: 50%
 }/>
+```
+#### duration
+Type: `number | string`<br>
+Required: `false`<br>
+you can set the animation duration
+```html
+<vue-relay-runner duration="800"/>
 ```
 
 ## License
