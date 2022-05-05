@@ -3,22 +3,21 @@
     <RouterLink
       v-for="user, idx of userList"
       :key="user.id"
-      :to="`/relayDetail/${user.id}`"
+      :to="`/relayProDetail/${user.id}`"
     >
       <div class="wrap-item">
         <div
           class="wrap-item__image"
           :class="isFit ? 'wrap-item__image__fit' : ''"
         >
-          <vue-relay-runner
-            :id="idx"
-            duration="800"
-            :style-attr="{
+          <relay-runner-proxy
+            :styleAttr="{
               borderRadius: '8px',
             }"
+            :runnerId="idx"
           >
             <the-image :src="user.src" />
-          </vue-relay-runner>
+          </relay-runner-proxy>
         </div>
         <div class="wrap-item__name">
           <p>{{ user.name }}</p>
@@ -30,6 +29,7 @@
 <script lang="ts" setup>
 import { userList } from '../composable/data';
 import TheImage from './theImage.vue';
+import {relayRunnerProxy} from '../../../src/core/relayRunnerPro';
 const isFit = ref(false);
 if (window.sessionStorage.getItem('isFit')) {
   isFit.value = JSON.parse(window.sessionStorage.getItem('isFit') ?? 'false');

@@ -13,6 +13,14 @@ const routes: Array<RouteRecordRaw> = [
     path: '/relayDetail/:id',
     component: () => import('../components/relayDetail.vue')
   },
+  {
+    path: '/relayPro',
+    component: () => import('../components/relayPro.vue')
+  },
+  {
+    path: '/relayProDetail/:id',
+    component: () => import('../components/relayProDetail.vue')
+  }
 ];
 
 const router = createRouter({

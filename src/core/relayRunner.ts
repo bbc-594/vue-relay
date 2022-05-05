@@ -4,7 +4,7 @@ import { useResizeObserver } from './hooks/useResizeObserver';
 import { contextMap, styleMap } from './state';
 const relayRunner = defineComponent({
   name: 'vue-relay-runner',
-  inheritAttrs: true,
+  inheritAttrs: false,
   props: {
     id: {
       type: [String, Number],
@@ -28,10 +28,10 @@ const relayRunner = defineComponent({
     const styleAttr = ref<any>(styleMap.get(relayId.value));
     const previousRect = contextMap.get(relayId.value);
     const realRect = useElementBounding(el, {
-      reset: true,
+      reset: false,
       windowScroll: true,
       windowResize: true
-    }, previousRect);
+    });
     useResizeObserver(el, async () => {
       landEnable.value = false;
       await nextTick();
@@ -77,7 +77,6 @@ const relayRunner = defineComponent({
     function onTransitionEnd() {
       landEnable.value = true;
     }
-
     return () => {
       return h('div', {
         ref: el,
@@ -91,7 +90,7 @@ const relayRunner = defineComponent({
           disabled: !landEnable.value || !el.value,
         },
         h('div', {
-          class: 'replay-animation-container',
+          class: `replay-animation-container`,
           style: style.value,
           onTransitionend: onTransitionEnd,
         },
