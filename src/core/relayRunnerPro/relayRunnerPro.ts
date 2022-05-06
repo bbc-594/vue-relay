@@ -12,7 +12,7 @@ const relayRunnerPro = defineComponent({
     const context = computed(() => {
       return contextMap.get(String(props.runnerId));
     })
-    const teleportTo = computed(() => context.value?.el?.id ?? 'body');
+    const teleportTo = computed(() => context.value?.el?.id ?? '');
     const style = computed(() => {
       const defaultStyle = {
         position: 'fixed',

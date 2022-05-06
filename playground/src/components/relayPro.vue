@@ -1,9 +1,9 @@
 <template lang="">
   <div class="wrap">
     <RouterLink
-      v-for="user, idx of userList"
-      :key="user.id"
-      :to="`/relayProDetail/${user.id}`"
+      v-for="item, idx of data"
+      :key="idx"
+      :to="`/relayProDetail/${idx}`"
     >
       <div class="wrap-item">
         <div
@@ -16,18 +16,20 @@
             }"
             :runnerId="idx"
           >
-            <the-image :src="user.src" />
+            <the-image :src="item.src" />
           </relay-runner-proxy>
         </div>
         <div class="wrap-item__name">
-          <p>{{ user.name }}</p>
+          <!-- <relay-runner-proxy :runnerId="idx + item.name"> -->
+             <p>{{ item.name }}</p>
+          <!-- </relay-runner-proxy> -->
         </div>
       </div>
     </RouterLink>
   </div>
 </template>
 <script lang="ts" setup>
-import { userList } from '../composable/data';
+import { data } from '../composable/data';
 import TheImage from './theImage.vue';
 import {relayRunnerProxy} from '../../../src/core/relayRunnerPro';
 const isFit = ref(false);

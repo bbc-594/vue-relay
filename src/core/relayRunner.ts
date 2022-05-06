@@ -28,10 +28,10 @@ const relayRunner = defineComponent({
     const styleAttr = ref<any>(styleMap.get(relayId.value));
     const previousRect = contextMap.get(relayId.value);
     const realRect = useElementBounding(el, {
-      reset: false,
+      reset: true,
       windowScroll: true,
       windowResize: true
-    });
+    }, previousRect);
     useResizeObserver(el, async () => {
       landEnable.value = false;
       await nextTick();

@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "declaration": true,
+    "outDir": "./dist/",
     "lib": ["esnext", "DOM"],
     "moduleResolution": "node",
     "esModuleInterop": true,

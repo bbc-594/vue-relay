@@ -2,7 +2,6 @@ import css from 'rollup-plugin-css-only';
 import typescript from 'rollup-plugin-typescript2';
 import vuePlugin from 'rollup-plugin-vue';
 import {name} from './package.json';
-const file = (type) => `dist/${name}.${type}.js`;
 const tsConfigOverride = {
   compilerOptions: {
     target: 'ES6',
@@ -20,16 +19,12 @@ export default {
     input: 'src/index.ts',
     output: [{
       name,
-      file: file('esm'),
+      file: 'dist/index.js',
       format: 'esm',
-     }, {
-       name,
-       file: file('umd'),
-       format: 'umd',
-       globals
-    }],
+      sourcemap: false
+     }],
     plugins: [
-      typescript({tsConfigOverride, useTsconfigDeclarationDir: true}),
+      typescript({tsConfigOverride}),
       css({output: 'relay.css'}),
       vuePlugin()
     ],

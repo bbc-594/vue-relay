@@ -32,6 +32,7 @@ const relayRunnerProxy = defineComponent({
     const runnerContext = getContext(String(props.runnerId), markRaw(component));
     runnerContext.childProps = componentProps;
     contextMap.set(String(props.runnerId), runnerContext);
+
     onMounted(async () => {
       runnerContext.el = proxyEl.value;
       await nextTick()
