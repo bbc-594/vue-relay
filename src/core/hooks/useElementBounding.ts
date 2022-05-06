@@ -7,16 +7,16 @@ export interface UseElementBoundingOptions {
   windowScroll?: boolean,
 }
 export type UseElementBoundingReturn = ReturnType<typeof useElementBounding>;
-export function useElementBounding(target: MaybeElementRef, options: UseElementBoundingOptions) {
+export function useElementBounding(target: MaybeElementRef, options: UseElementBoundingOptions, defaultRect?: any) {
   const { reset = true, windowResize = true, windowScroll = true } = options;
-  const width = ref(0);
-  const height = ref(0);
-  const left = ref(0);
-  const right = ref(0);
-  const top = ref(0);
-  const bottom = ref(0);
-  const x = ref(0);
-  const y = ref(0);
+  const width = ref(defaultRect?.width ?? 0);
+  const height = ref(defaultRect?.height ?? 0);
+  const left = ref(defaultRect?.left ?? 0);
+  const right = ref(defaultRect?.right ?? 0);
+  const top = ref(defaultRect?.top ?? 0);
+  const bottom = ref(defaultRect?.bottom ?? 0);
+  const x = ref(defaultRect?.x ?? 0);
+  const y = ref(defaultRect?.y ?? 0);
   function update() {
     if (!target.value) {
       if (reset) {

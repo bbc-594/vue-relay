@@ -25,6 +25,8 @@ export default defineComponent({
 <style lang="scss">
 .the-image {
   position: relative;
+  width: 100%;
+  height: 100%;
   img {
     display: block;
     object-fit: cover;

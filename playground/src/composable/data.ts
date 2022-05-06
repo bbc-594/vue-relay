@@ -3,6 +3,14 @@ const userList: {
   name: string;
   src: string;
 }[] = [];
+const data = [
+  {name: 'Next Nature Riftblue', src: 'https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/3a56fdf3-55c5-48b6-9f32-21f769c3d898/dunk-low-next-nature-riftblue-dd3358-400-release-date.jpg', content:
+   "Putting a winterized spin on the '80s basketball icon, the Dunk Low 'Next Nature Riftblue' keeps it cozy with a quilted upper made with 100% recycled polyester. Its aesthetic pairs perfectly with your favorite puffy jacket while the supersoft, fleece-like lining helps keep you warm. Designed using sustainable materials, this Dunk Low is made with at least 20% recycled content by weight."},
+  {name: 'Next Nature', src: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e2ae91ed-6564-42b7-a110-40adce0bddf1/dunk-low-retro-next-nature-mens-shoes.png', content:
+   "Putting a winterized spin on the '80s basketball icon, the Dunk Low  'Next Nature' keeps it cozy with a quilted upper made with 100% recycled polyester. Its aesthetic pairs perfectly with your favorite puffy jacket while the supersoft, fleece-like lining helps keep you warm. Designed using sustainable materials, the 'Next Nature' is  made with at least 20% recycled content by weight."},
+  {name: 'Team Red and White',
+   src: 'https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/3c9c4df3-3215-41ba-a77d-6899b8334bb9/dunk-low-team-red-and-white-dd1391-601-release-date.jpg', content: 'Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colors. This basketball icon channels "80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century."'}
+];
 const images = [
   'https://img.139y.com/m00/1c/ef/3195573aa7b03659a4d1e76059aea212.jpg',
   'https://img.139y.com/m00/1c/86/9b403b0643ba3351e30e11df4c952679.jpg',
@@ -129,5 +137,5 @@ images.forEach((src, idx) => {
   });
 });
 
-export { userList };
+export { userList, data };
 

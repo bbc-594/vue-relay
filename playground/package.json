@@ -10,7 +10,7 @@
   "dependencies": {
     "unplugin-auto-import": "^0.7.1",
     "vue": "^3.2.25",
-    "vue-relay-runner": "0.0.2",
+    "vue-relay-runner": "0.0.5",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
